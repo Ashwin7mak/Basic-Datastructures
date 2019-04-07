@@ -15,7 +15,7 @@ class Queue {
         if (this.array.length < 0) {
             return "Underflow";
         }
-        return this.array.shift();
+        return this.array.shift();    
     }
 
     // Front function
@@ -57,6 +57,11 @@ queue1.printQueue();
 
 queue1.front();
 
-queue1.dequeue(80);
+queue1.dequeue();
 queue1.printQueue();
 
+queue1.enqueue(200);
+queue1.printQueue();
+
+// queue1.dequeue();
+// queue1.printQueue();
