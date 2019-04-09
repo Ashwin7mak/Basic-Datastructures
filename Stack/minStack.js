@@ -35,6 +35,7 @@ class MinStack {
 
     // Top function
     top() {
+        console.log("The top element is ", this.stack[this.stack.length - 1]);
         return this.stack[this.stack.length - 1];
     }
 
@@ -63,6 +64,8 @@ obj.push(10);
 obj.push(20);
 obj.push(30);
 obj.push(5);
+obj.push(40);
+obj.push(50);
 obj.printStack();
 obj.printMinStack();
 
@@ -71,3 +74,7 @@ obj.printStack();
 obj.printMinStack();
 
 obj.getMin();
+obj.printStack();
+obj.printMinStack();
+
+obj.top();
