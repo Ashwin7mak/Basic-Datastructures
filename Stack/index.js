@@ -7,7 +7,7 @@ class Stack {
 
     // Push element
     push(element) {
-        this.item.push(element);
+        return this.item.push(element);
     }
 
     // Pop element
@@ -28,6 +28,11 @@ class Stack {
     }
 
     isEmpty() {
+        if(this.item.length === 0) {
+            console.log("Stack is empty");
+        } else {
+            console.log("Stack is not empty");
+        } 
         return this.item.length === 0;
     }
 
@@ -42,7 +47,7 @@ class Stack {
 
 
 let stack1 = new Stack();
-
+stack1.isEmpty();
 stack1.push(10);
 stack1.push(20);
 stack1.push(30);
