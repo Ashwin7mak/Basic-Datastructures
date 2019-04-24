@@ -138,6 +138,36 @@ class BST {
         return this.root = removeNode(this.root, data);
     }
 
+    // Find minimum height
+    findMinHeight(node) {
+        if(node == null) {
+            return -1;
+        }
+        let left = this.findMinHeight(node.left);
+        let right = this.findMinHeight(node.right);
+
+        if(left < right) {
+            return left + 1;
+        } else {
+            return right + 1;
+        }
+    }
+
+    // Find maximum height
+    findMaxHeight(node) {
+        if (node == null) {
+            return -1;
+        }
+        let left = this.findMaxHeight(node.left);
+        let right = this.findMaxHeight(node.right);
+
+        if (left > right) {
+            return left + 1;
+        } else {
+            return right + 1;
+        }
+    }
+
 }
 
 
@@ -158,3 +188,8 @@ console.log(bst.findMin());
 console.log(bst.findMax());
 
 console.log(bst.isPresent(4));
+
+console.log(bst.findMinHeight());
+
+console.log(bst.findMaxHeight());
+
