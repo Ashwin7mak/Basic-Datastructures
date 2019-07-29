@@ -103,4 +103,4 @@ graph.addEdge('C', 'F');
 graph.printGraph();
 
 console.log("---- BFT ----");
-graph.bft('C');
+graph.bft('A');     // A B C D E F
