@@ -50,7 +50,7 @@ class Graph {
         // Visited array to keep track of visited vertices
         let visited = [];
 
-        for(let i = 0; i < visited.length; i++) {
+        for(let i = 0; i < this.noOfVertices; i++) {
             visited[i] = false;
         }
         
